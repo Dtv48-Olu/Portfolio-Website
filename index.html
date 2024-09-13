@@ -5,13 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Olutoye.O - Developer Portfolio</title>
         <link rel="stylesheet" href="styles.css" />
-        <meta name="description" content="Olutoye.O's Developer Portfolio" />
-        <meta name="keywords" content="developer, portfolio, web development" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <header>
-            <h1>Olutoye.O</h1>
             <nav>
+                <div class="logo">Olutoye.O</div>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -21,22 +23,42 @@
         </header>
 
         <main>
+            <section id="hero">
+                <h1>Hi, I'm Olutoye.O</h1>
+                <p>A passionate developer creating innovative solutions</p>
+            </section>
+
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    Welcome to my Portfolio. I'm Olutoye.O, a passionate
-                    developer...
+                    I'm a dedicated developer with a keen interest in [your
+                    interests]. My journey in tech began [brief background]...
                 </p>
             </section>
 
             <section id="projects">
                 <h2>My Projects</h2>
-                <!-- Add your projects here -->
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Project 1</h3>
+                        <p>Description of project 1</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Project 2</h3>
+                        <p>Description of project 2</p>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
             </section>
 
             <section id="contact">
-                <h2>Contact Me</h2>
-                <!-- Add your contact information or a form here -->
+                <h2>Get In Touch</h2>
+                <form>
+                    <input type="text" placeholder="Name" required />
+                    <input type="email" placeholder="Email" required />
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
             </section>
         </main>
 
