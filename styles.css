@@ -206,3 +206,37 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.skill-progress-container {
+    background-color: var(--cream-light);
+    border-radius: 15px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--cream-darkest);
+    border-radius: 15px;
+    position: relative;
+    transition: width 1s ease-in-out;
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    color: var(--text-dark);
+}
