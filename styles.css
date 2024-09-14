@@ -75,54 +75,23 @@ main {
 }
 
 /* Rest of your existing styles... */
-
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    .hamburger, .hamburger::before, .hamburger::after {
-        display: block;
-        background-color: #0e2431;
-        height: 3px;
-        width: 30px;
-        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-        border-radius: 2px;
-    }
-
-    .hamburger::before {
-        content: '';
-        margin-top: -8px;
-    }
-
-    .hamburger::after {
-        content: '';
-        margin-top: 8px;
-    }
-
     .nav-links {
         position: fixed;
-        top: 0;
+        top: 62px; /* Adjust this value to match your header height */
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 1;
         background: rgba(255, 255, 255, 0.9);
-        display: flex;
+        display: none;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in-out;
+        padding-top: 20px;
     }
 
     .nav-links.active {
-        transform: translateX(0);
+        display: flex;
     }
 
     .nav-links li {
@@ -134,15 +103,47 @@ main {
     }
 
     .nav-toggle.active .hamburger {
-        transform: rotate(45deg);
+        background-color: transparent;
     }
 
     .nav-toggle.active .hamburger::before {
-        transform: rotate(90deg) translateX(-8px);
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
     .nav-toggle.active .hamburger::after {
-        transform: rotate(90deg) translateX(8px);
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .hamburger, .hamburger::before, .hamburger::after {
+        display: block;
+        background-color: #0e2431;
+        height: 3px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+        position: relative;
+    }
+
+    .hamburger::before, .hamburger::after {
+        content: '';
+        position: absolute;
+        left: 0;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        top: 8px;
     }
 }
 ```
