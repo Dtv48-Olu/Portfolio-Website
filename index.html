@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="filter.js"></script>
+        <script src="hero.js"></script>
+        <script src="bar_animation.js"></script>
+        <script src="smooth_scrolling.js"></script>
         <title>Olutoye.O - Developer Portfolio</title>
         <link rel="stylesheet" href="styles.css" />
         <link
@@ -25,27 +30,78 @@
         <main>
             <section id="hero">
                 <h1>Hi, I'm Olutoye.O</h1>
-                <p>A passionate developer creating innovative solutions</p>
+                <p>
+                    A passionate
+                    <span id="type-text"
+                        >young developer creating intresting solutions
+                    </span>
+                </p>
             </section>
 
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    I'm a dedicated developer with a keen interest in [your
-                    interests]. My journey in tech began [brief background]...
+                    I'm a dedicated developer with a keen interest in problem
+                    solving and c++. My journey in tech began in 5th grade in
+                    Elementary School. At the time I was really was just looking
+                    for a passion in life that really allgined with me. I was
+                    always a fan of video games like everyone, but I had an
+                    interest in Pokemon fan games. In my mind I always felt like
+                    I could make a game that was better than the ones I
+                    played... As time went on I started to learn more about
+                    coding and tech in general.
                 </p>
+            </section>
+
+            <section id="skills">
+                <h2>My Skills</h2>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80">
+                        HTML/CSS
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="70">
+                        JavaScript
+                    </div>
+                </div>
+                <!-- Add more skills as needed -->
             </section>
 
             <section id="projects">
                 <h2>My Projects</h2>
+
+                <!-- Add this filter buttons div -->
+                <div id="project-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">
+                        Mobile
+                    </button>
+                    <button class="filter-btn" data-filter="other">
+                        Other
+                    </button>
+                </div>
+
+                <!-- Update your project grid -->
                 <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>Description of project 1</p>
+                    <div class="project-card" data-category="web">
+                        <h3>Web Project 1</h3>
+                        <p>Description of web project 1</p>
                     </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>Description of project 2</p>
+                    <div class="project-card" data-category="mobile">
+                        <h3>Mobile App 1</h3>
+                        <p>Description of mobile app 1</p>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <h3>Web Project 2</h3>
+                        <p>Description of web project 2</p>
+                    </div>
+                    <div class="project-card" data-category="other">
+                        <h3>Other Project</h3>
+                        <p>Description of other project</p>
                     </div>
                     <!-- Add more project cards as needed -->
                 </div>
