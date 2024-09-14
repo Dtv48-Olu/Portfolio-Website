@@ -8,6 +8,7 @@
         <script src="hero.js"></script>
         <script src="bar_animation.js"></script>
         <script src="smooth_scrolling.js"></script>
+        <script src="message.js"></script>
         <title>Olutoye.O - Developer Portfolio</title>
         <link rel="stylesheet" href="styles.css" />
         <link
@@ -80,6 +81,12 @@
                     <button class="filter-btn" data-filter="mobile">
                         Mobile
                     </button>
+                    <button class="filter-btn" data-filter="desktop">
+                        Desktop
+                    </button>
+                    <button class="filter-btn" data-filter="games">
+                        Games
+                    </button>
                     <button class="filter-btn" data-filter="other">
                         Other
                     </button>
@@ -103,18 +110,35 @@
                         <h3>Other Project</h3>
                         <p>Description of other project</p>
                     </div>
+                    <div class="project-card" data-category="games">
+                        <h3>Game Project</h3>
+                        <p>Description of game project</p>
+                    </div>
+                    <div class="project-card" data-category="desktop">
+                        <h3>Desktop Project</h3>
+                        <p>Description of desktop project</p>
+                    </div>
                     <!-- Add more project cards as needed -->
                 </div>
             </section>
 
             <section id="contact">
                 <h2>Get In Touch</h2>
-                <form>
-                    <input type="text" placeholder="Name" required />
-                    <input type="email" placeholder="Email" required />
-                    <textarea placeholder="Message" required></textarea>
+                <form action="https://formspree.io/f/xkgwavdj" method="POST"></form>
+                    <label>
+                        Your email:
+                        <input type="email" name="email" />
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <!-- your other form fields go here -->
                     <button type="submit">Send</button>
                 </form>
+                <div id="thank-you" style="display: none;">
+                    <p>Thank you for your message! I'll get back to you soon.</p>
+                </div>
             </section>
         </main>
 
