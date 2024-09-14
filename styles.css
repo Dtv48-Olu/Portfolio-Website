@@ -4,6 +4,7 @@
     --cream-medium: #f2e2c2;
     --cream-dark: #e6d0a5;
     --cream-darkest: #d9b88f;
+    --cream-hover: #c9a77f;
     --text-dark: #5d4037;
 }
 
@@ -229,7 +230,23 @@ footer {
     background-color: var(--cream-darkest);
     border-radius: 15px;
     position: relative;
-    transition: width 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.skill-progress-fluid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--cream-darkest) 0%,
+        var(--cream-medium) 50%,
+        var(--cream-darkest) 100%
+    );
+    animation: fluid-animation 2s infinite linear;
 }
 
 .skill-percentage {
@@ -239,4 +256,27 @@ footer {
     transform: translateY(-50%);
     font-size: 0.8em;
     color: var(--text-dark);
+    z-index: 1;
+}
+
+.skill-progress-container:hover .skill-progress {
+    background-color: var(--cream-hover);
+}
+
+.skill-progress-container:hover .skill-progress-fluid {
+    background: linear-gradient(
+        90deg,
+        var(--cream-hover) 0%,
+        var(--cream-dark) 50%,
+        var(--cream-hover) 100%
+    );
+}
+
+@keyframes fluid-animation {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
