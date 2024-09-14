@@ -1,3 +1,12 @@
+:root {
+    --cream-lightest: #fff8e7;
+    --cream-light: #f9efd6;
+    --cream-medium: #f2e2c2;
+    --cream-dark: #e6d0a5;
+    --cream-darkest: #d9b88f;
+    --text-dark: #5d4037;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +16,16 @@
 body {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
-    color: #333;
-    padding-top: 64px; /* Add this to account for the fixed header */
+    color: var(--text-dark);
+    background-color: var(--cream-lightest);
+    padding-top: 64px;
 }
 
 header {
-    background-color: #fff;
+    background-color: var(--cream-light);
     box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
+        0 1px 3px rgba(93, 64, 55, 0.12),
+        0 1px 2px rgba(93, 64, 55, 0.24);
     padding: 0 20px;
     position: fixed;
     top: 0;
@@ -36,7 +46,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #5f6368;
+    color: var(--text-dark);
 }
 
 .nav-links {
@@ -45,7 +55,7 @@ nav {
 }
 
 .nav-links a {
-    color: #5f6368;
+    color: var(--text-dark);
     text-decoration: none;
     padding: 0 15px;
     font-size: 0.9rem;
@@ -54,7 +64,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #202124;
+    color: var(--cream-darkest);
 }
 
 .menu-toggle {
@@ -68,14 +78,14 @@ nav {
 }
 
 .menu-toggle:hover {
-    background-color: rgba(60, 64, 67, 0.08);
+    background-color: var(--cream-medium);
 }
 
 .menu-icon {
     display: block;
     width: 24px;
     height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%235D4037' d='M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z'%3E%3C/path%3E%3C/svg%3E");
     background-size: cover;
 }
 
@@ -92,6 +102,7 @@ section {
 h1,
 h2 {
     margin-bottom: 20px;
+    color: var(--text-dark);
 }
 
 .project-grid {
@@ -101,10 +112,28 @@ h2 {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: var(--cream-light);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(93, 64, 55, 0.1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(93, 64, 55, 0.2);
+}
+
+.project-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--text-dark);
+    font-size: 0.9rem;
 }
 
 form {
@@ -118,14 +147,16 @@ input,
 textarea {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--cream-dark);
     border-radius: 4px;
+    background-color: var(--cream-lightest);
+    color: var(--text-dark);
 }
 
 button {
     padding: 10px 20px;
-    background-color: #5f6368;
-    color: #fff;
+    background-color: var(--cream-darkest);
+    color: var(--text-dark);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -133,14 +164,15 @@ button {
 }
 
 button:hover {
-    background-color: #202124;
+    background-color: var(--cream-dark);
 }
 
 footer {
-    background-color: #f8f9fa;
+    background-color: var(--cream-light);
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    color: var(--text-dark);
 }
 
 @media (max-width: 768px) {
@@ -150,11 +182,11 @@ footer {
         top: 64px;
         left: 0;
         right: 0;
-        background-color: #fff;
+        background-color: var(--cream-light);
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 4px rgba(93, 64, 55, 0.2);
     }
 
     .nav-links.active {
