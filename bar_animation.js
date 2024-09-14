@@ -1,17 +1,19 @@
-function animateSkills() {
-  const skillBars = document.querySelectorAll(".skill-progress");
-  skillBars.forEach((bar) => {
-    const progress = bar.getAttribute("data-progress");
-    bar.style.width = `${progress}%`;
-  });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
+  const skillBars = document.querySelectorAll(".skill-progress");
+
+  function animateSkillBars() {
+    skillBars.forEach((bar) => {
+      const progress = bar.getAttribute("data-progress");
+      bar.style.width = `${progress}%`;
+    });
+  }
+
+  // Animate skill bars when they come into view
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          animateSkills();
+          animateSkillBars();
           observer.unobserve(entry.target);
         }
       });
@@ -20,7 +22,5 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   const skillsSection = document.getElementById("skills");
-  if (skillsSection) {
-    observer.observe(skillsSection);
-  }
+  observer.observe(skillsSection);
 });
