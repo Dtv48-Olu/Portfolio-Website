@@ -201,4 +201,67 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* Hamburger Menu */
+    .nav-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        background: #ecf0f1;
+        border-radius: 5px;
+        transition: all 0.3s linear;
+        position: relative;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: #ecf0f1;
+        border-radius: 5px;
+        transition: all 0.3s linear;
+        position: absolute;
+    }
+
+    .hamburger::before {
+        transform: translateY(-8px);
+    }
+
+    .hamburger::after {
+        transform: translateY(8px);
+    }
+
+    @media (max-width: 768px) {
+        .nav-toggle {
+            display: flex;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            padding: 1rem;
+            width: 100%;
+        }
+    }
 }
