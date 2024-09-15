@@ -45,9 +45,13 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    max-height: 40px; /* Adjust this value to fit your logo size */
+    width: auto;
 }
 
 .nav-links {
@@ -188,6 +192,10 @@ footer {
         align-items: flex-start;
         padding: 10px 0;
         box-shadow: 0 2px 4px rgba(93, 64, 55, 0.2);
+    }
+
+    .logo-image {
+        max-height: 30px; /* Smaller size for mobile */
     }
 
     .nav-links.active {
