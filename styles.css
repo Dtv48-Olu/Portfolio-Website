@@ -276,6 +276,14 @@ footer {
     }
 }
 
+#project-filters {
+    margin-bottom: 30px; /* Adds space below the filter buttons */
+}
+
+.project-grid {
+    padding-top: 20px; /* Adds space above the project cards */
+}
+
 @media (max-width: 768px) {
     .project-grid {
         grid-template-columns: 1fr;
@@ -307,4 +315,35 @@ footer {
         width: 50px;
         height: 50px;
     }
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    color: var(--cream-darkest);
+}
+
+body.dark-mode {
+    --cream-lightest: #1a1a1a;
+    --cream-light: #2a2a2a;
+    --cream-medium: #3a3a3a;
+    --cream-dark: #4a4a4a;
+    --cream-darkest: #5a5a5a;
+    --cream-hover: #6a6a6a;
+    --text-dark: #e0e0e0;
+}
+
+.dark-mode #darkModeToggle {
+    color: var(--text-dark);
+}
+
+.dark-mode #darkModeToggle:hover {
+    color: var(--cream-lightest);
 }
