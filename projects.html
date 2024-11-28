@@ -10,23 +10,12 @@
         <!-- Add other necessary scripts -->
     </head>
     <body>
-        <header>
-            <!-- Include the same header as in index.html -->
-        </header>
-
-        <main>
-            <h1>My Projects</h1>
-            <!-- Add your project filter buttons and project grid here -->
-            <div id="project-filters">
-                <!-- Your filter buttons -->
-            </div>
-            <div class="project-grid">
-                <!-- Your project cards -->
-            </div>
-        </main>
-
-        <footer>
-            <!-- Include the same footer as in index.html -->
-        </footer>
+        <script src="github.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const github = new GitHubProjects("Dtv48-Olu");
+                github.displayProjects(); // Show all projects on the projects page
+            });
+        </script>
     </body>
 </html>
