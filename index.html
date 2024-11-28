@@ -11,6 +11,7 @@
         <script src="message.js"></script>
         <script src="menu_toggle.js"></script>
         <script src="darkMode.js"></script>
+        <script src="github.js"></script>
         <title>Olutoye.O - Developer Portfolio</title>
         <link rel="stylesheet" href="styles.css" />
         <link
@@ -117,55 +118,15 @@
 
             <section id="projects">
                 <h2>My Projects</h2>
-
-                <!-- Add this filter buttons div -->
                 <div id="project-filters">
-                    <button class="filter-btn active" data-filter="all">
-                        All
-                    </button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="mobile">
-                        Mobile
-                    </button>
-                    <button class="filter-btn" data-filter="desktop">
-                        Desktop
-                    </button>
-                    <button class="filter-btn" data-filter="games">
-                        Games
-                    </button>
-                    <button class="filter-btn" data-filter="other">
-                        Other
-                    </button>
+                    <!-- Filters will be dynamically populated -->
                 </div>
-
-                <!-- Update your project grid -->
                 <div class="project-grid">
-                    <div class="project-card" data-category="web">
-                        <h3>Web Project 1</h3>
-                        <p>Description of web project 1</p>
-                    </div>
-                    <div class="project-card" data-category="mobile">
-                        <h3>Mobile App 1</h3>
-                        <p>Description of mobile app 1</p>
-                    </div>
-                    <div class="project-card" data-category="web">
-                        <h3>Web Project 2</h3>
-                        <p>Description of web project 2</p>
-                    </div>
-                    <div class="project-card" data-category="other">
-                        <h3>Other Project</h3>
-                        <p>Description of other project</p>
-                    </div>
-                    <div class="project-card" data-category="games">
-                        <h3>Game Project</h3>
-                        <p>Description of game project</p>
-                    </div>
-                    <div class="project-card" data-category="desktop">
-                        <h3>Desktop Project</h3>
-                        <p>Description of desktop project</p>
-                    </div>
-                    <!-- Add more project cards as needed -->
+                    <div class="loading">Loading projects...</div>
                 </div>
+                <a href="projects.html" class="section-link">
+                    View All Projects <i class="fas fa-arrow-right"></i>
+                </a>
             </section>
             <section id="contact">
                 <h2>Get In Touch</h2>
@@ -216,5 +177,13 @@
         <footer>
             <p>&copy; 2024 Olutoye.O. All rights reserved.</p>
         </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const github = new GitHubProjects("Dtv48-Olu"); // Replace with your GitHub username
+
+                // For index page, only show featured/recent projects
+                github.displayProjects(true, 6); // true for featured mode, 6 is the limit
+            });
+        </script>
     </body>
 </html>
