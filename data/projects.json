@@ -1,0 +1,38 @@
+[
+  {
+    "id": "stardust-saga",
+    "title": "Stardust Saga Refactor",
+    "description": "Re-architecting a 2D action game using Godot 4. Modular Entity-Component system and Object Pooling for performance optimization.",
+    "status": "building",
+    "progress": 15,
+    "techStack": ["Godot", "GDScript", "Design Patterns", "Game Dev"],
+    "links": { "github": "https://github.com/Dtv48-Olu/Binary_Game" }
+  },
+  {
+    "id": "dev-dashboard",
+    "title": "Dev Productivity Dashboard",
+    "description": "Full-stack application to manage code snippets. Features JWT auth, MongoDB search, and AWS deployment.",
+    "status": "building",
+    "progress": 10,
+    "techStack": ["React", "Node.js", "AWS", "MongoDB"],
+    "links": { "github": "#" }
+  },
+  {
+    "id": "finance-engine",
+    "title": "Personal Finance Engine",
+    "description": "Enterprise-grade backend API for budget tracking. Uses Spring Boot for logic and PostgreSQL for ACID-compliant data storage.",
+    "status": "planned",
+    "progress": 0,
+    "techStack": ["Java", "Spring Boot", "PostgreSQL", "API Security"],
+    "links": { "github": "#" }
+  },
+  {
+    "id": "mips-game",
+    "title": "MIPS Binary Game",
+    "description": "Low-level assembly game demonstrating computer architecture fundamentals and memory management.",
+    "status": "shipped",
+    "progress": 100,
+    "techStack": ["MIPS Assembly", "Low Level"],
+    "links": { "github": "https://github.com/Dtv48-Olu/Binary_Game" }
+  }
+]
