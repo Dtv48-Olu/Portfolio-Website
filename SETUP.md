@@ -90,7 +90,11 @@ href="https://linkedin.com/in/YOUR-PROFILE"
 
 ## Step 4: Add Your Projects
 
-Open `data/projects.json` and replace the sample projects with your own.
+Edit `data/manual-projects.json` to add or override entries, then regenerate `data/projects.json` so the automatic sync picks up your changes:
+
+```bash
+npm run sync-projects
+```
 
 ### Project Schema
 
@@ -166,6 +170,8 @@ Open `data/projects.json` and replace the sample projects with your own.
   }
 }
 ```
+
+After editing, run `npm run sync-projects` again to regenerate `data/projects.json` before validating or building.
 
 ---
 
@@ -404,4 +410,4 @@ import Skills from '@/components/Skills'
 
 **You're all set! 🎉**
 
-Your portfolio is now a living document that grows with your career. Simply update `projects.json` as you build new things!
+Your portfolio is now a living document that grows with your career—run `npm run sync-projects` whenever you add new work, and everything else updates automatically.

@@ -24,7 +24,13 @@ Add your `resume.pdf` here
 
 ## 3. Add Your Projects
 
-Edit `data/projects.json`:
+Add or override entries in `data/manual-projects.json`, then regenerate `data/projects.json`:
+
+```bash
+npm run sync-projects   # merges manual entries with live GitHub repos
+```
+
+(You can still edit `data/projects.json` directly if you prefer.) Use the schema below for each entry:
 
 ```json
 {
@@ -49,8 +55,9 @@ Edit `data/projects.json`:
 ## 4. Validate & Build
 
 ```bash
-npm run validate    # Check your data
-npm run build       # Build for production
+npm run sync-projects   # Regenerate data/projects.json
+npm run validate        # Check your data
+npm run build           # Build for production
 ```
 
 ## 5. Deploy

@@ -73,6 +73,8 @@ All project data is managed through the `data/projects.json` file. Each project 
 }
 ```
 
+You can still edit this file manually, but the repo also provides an automated sync via `npm run sync-projects`, which merges hand-curated entries with live GitHub metadata so the portfolio stays up to date with almost zero effort.
+
 ### Status Types
 
 - **`shipped`**: Completed, production-ready projects
@@ -90,6 +92,12 @@ To move a project from "Planned" to "In Progress":
 5. Save the file
 
 The UI will automatically reflect these changes!
+
+### Automatic GitHub Sync
+
+- `npm run sync-projects` (or any build command that triggers it) reads `data/manual-projects.json` for curated entries, fetches repositories from your GitHub account, and writes the combined result to `data/projects.json`.
+- The GitHub Actions workflow runs this command with your `GITHUB_TOKEN` before every deployment, so pushing to `main` automatically refreshes the portfolio.
+- To feature a repo, add a topic such as `portfolio` or `featured`, or create a manual override entry if you need custom descriptions, progress, or status.
 
 ## 🎨 Customization
 
@@ -148,7 +156,11 @@ Portfolio-Website/
 │   ├── ProjectZone.tsx   # Project category container
 │   └── ProjectCard.tsx   # Individual project card
 ├── data/
-│   └── projects.json     # Single source of truth for projects
+│   ├── manual-projects.json # Curated project overrides
+│   └── projects.json        # Auto-generated (manual + GitHub sync)
+├── scripts/
+│   ├── sync-projects.js     # Fetches GitHub repos and merges with manual data
+│   └── validate-projects.js # Ensures schema correctness
 ├── public/
 │   └── docs/
 │       └── resume.pdf    # Your resume (add this)

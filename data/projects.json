@@ -1,38 +1,101 @@
 [
   {
-    "id": "stardust-saga",
-    "title": "Stardust Saga Refactor",
-    "description": "Re-architecting a 2D action game using Godot 4. Modular Entity-Component system and Object Pooling for performance optimization.",
-    "status": "building",
-    "progress": 15,
-    "techStack": ["Godot", "GDScript", "Design Patterns", "Game Dev"],
-    "links": { "github": "https://github.com/Dtv48-Olu/Binary_Game" }
+    "id": "mips-binary-game",
+    "title": "MIPS Binary Game",
+    "description": "Educational assembly game that teaches binary arithmetic through low-level puzzles, registers, and memory-mapped IO challenges.",
+    "status": "shipped",
+    "progress": 100,
+    "techStack": [
+      "MIPS Assembly",
+      "RARS",
+      "Low-Level"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/Binary_Game",
+      "demo": "#",
+      "docs": "#"
+    },
+    "repo": "Binary_Game",
+    "manual": true
   },
   {
-    "id": "dev-dashboard",
-    "title": "Dev Productivity Dashboard",
-    "description": "Full-stack application to manage code snippets. Features JWT auth, MongoDB search, and AWS deployment.",
+    "id": "next-portfolio-platform",
+    "title": "Next.js Portfolio Platform",
+    "description": "Current site: statically generated portfolio with dynamic project zones, Tailwind theming, and automated GitHub Pages deployment.",
+    "status": "shipped",
+    "progress": 100,
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "GitHub Actions"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/Portfolio-Website",
+      "demo": "https://dtv48-olu.github.io/Portfolio-Website/",
+      "docs": "#"
+    },
+    "repo": "Portfolio-Website",
+    "manual": true
+  },
+  {
+    "id": "stardust-saga-refactor",
+    "title": "Stardust Saga Refactor",
+    "description": "Re-architecting a 2D action adventure in Godot 4 with a modular ECS, object pooling, and scene streaming for buttery-smooth combat.",
     "status": "building",
-    "progress": 10,
-    "techStack": ["React", "Node.js", "AWS", "MongoDB"],
-    "links": { "github": "#" }
+    "progress": 18,
+    "techStack": [
+      "Godot",
+      "GDScript",
+      "ECS",
+      "Game Design"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/stardust-saga-refactor",
+      "demo": "#",
+      "docs": "#"
+    },
+    "repo": "stardust-saga-refactor",
+    "manual": true
+  },
+  {
+    "id": "dev-productivity-dashboard",
+    "title": "Dev Productivity Dashboard",
+    "description": "Full-stack dashboard for personal KPIs, code snippet search, and automation hooks powered by JWT auth and MongoDB text indexes.",
+    "status": "building",
+    "progress": 28,
+    "techStack": [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "JWT"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/dev-productivity-dashboard",
+      "demo": "#",
+      "docs": "#"
+    },
+    "repo": "dev-productivity-dashboard",
+    "manual": true
   },
   {
     "id": "finance-engine",
     "title": "Personal Finance Engine",
-    "description": "Enterprise-grade backend API for budget tracking. Uses Spring Boot for logic and PostgreSQL for ACID-compliant data storage.",
+    "description": "Spring Boot microservice that ingests transactions, enforces budgeting rules, and exposes a typed REST API with PostgreSQL backing.",
     "status": "planned",
     "progress": 0,
-    "techStack": ["Java", "Spring Boot", "PostgreSQL", "API Security"],
-    "links": { "github": "#" }
-  },
-  {
-    "id": "mips-game",
-    "title": "MIPS Binary Game",
-    "description": "Low-level assembly game demonstrating computer architecture fundamentals and memory management.",
-    "status": "shipped",
-    "progress": 100,
-    "techStack": ["MIPS Assembly", "Low Level"],
-    "links": { "github": "https://github.com/Dtv48-Olu/Binary_Game" }
+    "techStack": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Flyway"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/finance-engine",
+      "demo": "#",
+      "docs": "#"
+    },
+    "repo": "finance-engine",
+    "manual": true
   }
 ]
