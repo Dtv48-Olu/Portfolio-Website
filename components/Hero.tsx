@@ -91,7 +91,7 @@ export default function Hero() {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/your-profile"
+                        href="https://www.linkedin.com/in/olutoye-odufowokan/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="link-primary bg-blue-700 hover:bg-blue-800 text-white shadow-lg shadow-blue-700/50"
