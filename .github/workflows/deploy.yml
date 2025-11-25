@@ -9,14 +9,17 @@ concurrency:
     group: deploy-portfolio-${{ github.ref }}
     cancel-in-progress: false
 
-env:
-    GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-
 jobs:
-    sync-and-build:
+    build-and-deploy:
         runs-on: ubuntu-latest
         permissions:
-            contents: write
+            contents: read
+            pages: write
+            id-token: write
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
@@ -30,9 +33,6 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            - name: Sync projects data
-              run: npm run sync-projects
-
             - name: Validate and Build
               run: |
                   npm run validate
@@ -40,32 +40,10 @@ jobs:
               env:
                   NODE_ENV: production
 
-            - name: Upload build artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: build-output
-                  path: ./out
-
-    deploy:
-        needs: sync-and-build
-        runs-on: ubuntu-latest
-        permissions:
-            pages: write
-            id-token: write
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        steps:
-            - name: Download build artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: build-output
-                  path: ./out
-
             - name: Setup Pages
               uses: actions/configure-pages@v4
 
-            - name: Upload to Pages
+            - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
                   path: "./out"

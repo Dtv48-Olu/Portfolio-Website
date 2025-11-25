@@ -172,23 +172,10 @@ function mergeProjects(manualProjects, autoProjects) {
 }
 
 async function main() {
-    console.log(
-        "Environment variables available:",
-        Object.keys(process.env)
-            .filter(
-                (k) =>
-                    k.includes("TOKEN") ||
-                    k.includes("GH") ||
-                    k.includes("GITHUB"),
-            )
-            .join(", ") || "none matching",
-    );
     const token =
         process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.TOKEN;
     if (!token) {
         console.warn("No GITHUB_TOKEN provided. GitHub sync will be skipped.");
-    } else {
-        console.log("Token found, length:", token.length);
     }
 
     const manualProjects = readJsonIfExists(MANUAL_PATH, []);

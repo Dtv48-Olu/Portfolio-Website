@@ -77,6 +77,24 @@
     "manual": true
   },
   {
+    "id": "matrix-graph",
+    "title": "Matrix Graph",
+    "description": "This program allows users to create and manipulate agraph using an adjacency matrix. The program supports the following features",
+    "status": "building",
+    "progress": 50,
+    "techStack": [
+      "Java"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/Matrix-Graph",
+      "demo": "#",
+      "docs": "#"
+    },
+    "repo": "Matrix-Graph",
+    "stars": 1,
+    "manual": false
+  },
+  {
     "id": "stardust-saga-refactor",
     "title": "Stardust Saga Refactor",
     "description": "Re-architecting a 2D action adventure in Godot 4 with a modular ECS, object pooling, and scene streaming for buttery-smooth combat.",
