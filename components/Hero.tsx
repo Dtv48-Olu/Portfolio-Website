@@ -20,7 +20,7 @@ export default function Hero() {
                         <div
                             className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-4xl font-bold"
                             role="img"
-                            aria-label="Olu Odufowokan's profile picture"
+                            aria-label="Olutoye Odufowokan's profile picture"
                         >
                             OO
                         </div>
@@ -30,7 +30,7 @@ export default function Hero() {
                 {/* Name & Title */}
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
                     <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Olu Odufowokan
+                        Olutoye Odufowokan
                     </span>
                 </h1>
 
