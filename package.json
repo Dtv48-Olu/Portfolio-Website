@@ -9,8 +9,7 @@
         "lint": "next lint",
         "export": "next build && next export",
         "sync-projects": "node scripts/sync-projects.js",
-        "validate": "node scripts/validate-projects.js",
-        "prebuild": "npm run sync-projects"
+        "validate": "node scripts/validate-projects.js"
     },
     "dependencies": {
         "next": "^16.0.3",
