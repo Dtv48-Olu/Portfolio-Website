@@ -36,7 +36,7 @@ jobs:
             - name: Sync projects data
               run: npm run sync-projects
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ github.token }}
 
             - name: Validate and Build
               run: |
