@@ -52,9 +52,9 @@
     {
         "id": "file-encryption",
         "title": "File Encryption Tool",
-        "description": "Optimized C++ file encryption utility implementing modern cryptographic algorithms for secure file handling.",
-        "status": "building",
-        "progress": 60,
+        "description": "Command-line C++ utility for encrypting and decrypting files.",
+        "status": "shipped",
+        "progress": 100,
         "techStack": ["C++", "Cryptography", "File I/O"],
         "links": {
             "github": "https://github.com/Dtv48-Olu/File-Encryption",
