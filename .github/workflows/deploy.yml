@@ -9,6 +9,9 @@ concurrency:
     group: deploy-portfolio-${{ github.ref }}
     cancel-in-progress: false
 
+env:
+    GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
 jobs:
     sync-and-build:
         runs-on: ubuntu-latest
@@ -27,19 +30,8 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            - name: Debug secret
-              run: |
-                  echo "Secret length: ${#GH_PAT}"
-                  if [ -z "$GH_PAT" ]; then
-                    echo "GH_PAT is empty or not set"
-                  else
-                    echo "GH_PAT is set"
-                  fi
-              env:
-                  GH_PAT: ${{ secrets.GH_PAT }}
-
             - name: Sync projects data
-              run: GITHUB_TOKEN="${{ secrets.GH_PAT }}" npm run sync-projects
+              run: npm run sync-projects
 
             - name: Validate and Build
               run: |
