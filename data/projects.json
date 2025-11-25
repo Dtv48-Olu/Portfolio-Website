@@ -39,6 +39,44 @@
     "manual": true
   },
   {
+    "id": "ai-chat-bot",
+    "title": "AI Chat Bot",
+    "description": "A conversational AI assistant using the OpenRouter API, featuring real-time responses and a clean JavaScript frontend.",
+    "status": "shipped",
+    "progress": 100,
+    "techStack": [
+      "JavaScript",
+      "OpenRouter API",
+      "REST APIs"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/AI-Chat-Bot",
+      "demo": "#",
+      "docs": "#"
+    },
+    "repo": "AI-Chat-Bot",
+    "manual": true
+  },
+  {
+    "id": "file-encryption",
+    "title": "File Encryption Tool",
+    "description": "Optimized C++ file encryption utility implementing modern cryptographic algorithms for secure file handling.",
+    "status": "building",
+    "progress": 60,
+    "techStack": [
+      "C++",
+      "Cryptography",
+      "File I/O"
+    ],
+    "links": {
+      "github": "https://github.com/Dtv48-Olu/File-Encryption",
+      "demo": "#",
+      "docs": "#"
+    },
+    "repo": "File-Encryption",
+    "manual": true
+  },
+  {
     "id": "stardust-saga-refactor",
     "title": "Stardust Saga Refactor",
     "description": "Re-architecting a 2D action adventure in Godot 4 with a modular ECS, object pooling, and scene streaming for buttery-smooth combat.",

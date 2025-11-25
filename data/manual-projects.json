@@ -1,77 +1,126 @@
 [
-  {
-    "id": "stardust-saga-refactor",
-    "title": "Stardust Saga Refactor",
-    "description": "Re-architecting a 2D action adventure in Godot 4 with a modular ECS, object pooling, and scene streaming for buttery-smooth combat.",
-    "status": "building",
-    "progress": 18,
-    "techStack": ["Godot", "GDScript", "ECS", "Game Design"],
-    "links": {
-      "github": "https://github.com/Dtv48-Olu/stardust-saga-refactor",
-      "demo": "#",
-      "docs": "#"
+    {
+        "id": "mips-binary-game",
+        "title": "MIPS Binary Game",
+        "description": "Educational assembly game that teaches binary arithmetic through low-level puzzles, registers, and memory-mapped IO challenges.",
+        "status": "shipped",
+        "progress": 100,
+        "techStack": ["MIPS Assembly", "RARS", "Low-Level"],
+        "links": {
+            "github": "https://github.com/Dtv48-Olu/Binary_Game",
+            "demo": "#",
+            "docs": "#"
+        },
+        "repo": "Binary_Game",
+        "manual": true
     },
-    "repo": "stardust-saga-refactor",
-    "manual": true
-  },
-  {
-    "id": "dev-productivity-dashboard",
-    "title": "Dev Productivity Dashboard",
-    "description": "Full-stack dashboard for personal KPIs, code snippet search, and automation hooks powered by JWT auth and MongoDB text indexes.",
-    "status": "building",
-    "progress": 28,
-    "techStack": ["Next.js", "Node.js", "MongoDB", "JWT"],
-    "links": {
-      "github": "https://github.com/Dtv48-Olu/dev-productivity-dashboard",
-      "demo": "#",
-      "docs": "#"
+    {
+        "id": "next-portfolio-platform",
+        "title": "Next.js Portfolio Platform",
+        "description": "Current site: statically generated portfolio with dynamic project zones, Tailwind theming, and automated GitHub Pages deployment.",
+        "status": "shipped",
+        "progress": 100,
+        "techStack": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "GitHub Actions"
+        ],
+        "links": {
+            "github": "https://github.com/Dtv48-Olu/Portfolio-Website",
+            "demo": "https://dtv48-olu.github.io/Portfolio-Website/",
+            "docs": "#"
+        },
+        "repo": "Portfolio-Website",
+        "manual": true
     },
-    "repo": "dev-productivity-dashboard",
-    "manual": true
-  },
-  {
-    "id": "finance-engine",
-    "title": "Personal Finance Engine",
-    "description": "Spring Boot microservice that ingests transactions, enforces budgeting rules, and exposes a typed REST API with PostgreSQL backing.",
-    "status": "planned",
-    "progress": 0,
-    "techStack": ["Java", "Spring Boot", "PostgreSQL", "Flyway"],
-    "links": {
-      "github": "https://github.com/Dtv48-Olu/finance-engine",
-      "demo": "#",
-      "docs": "#"
+    {
+        "id": "ai-chat-bot",
+        "title": "AI Chat Bot",
+        "description": "A conversational AI assistant using the OpenRouter API, featuring real-time responses and a clean JavaScript frontend.",
+        "status": "shipped",
+        "progress": 100,
+        "techStack": ["JavaScript", "OpenRouter API", "REST APIs"],
+        "links": {
+            "github": "https://github.com/Dtv48-Olu/AI-Chat-Bot",
+            "demo": "#",
+            "docs": "#"
+        },
+        "repo": "AI-Chat-Bot",
+        "manual": true
     },
-    "repo": "finance-engine",
-    "manual": true
-  },
-  {
-    "id": "mips-binary-game",
-    "title": "MIPS Binary Game",
-    "description": "Educational assembly game that teaches binary arithmetic through low-level puzzles, registers, and memory-mapped IO challenges.",
-    "status": "shipped",
-    "progress": 100,
-    "techStack": ["MIPS Assembly", "RARS", "Low-Level"],
-    "links": {
-      "github": "https://github.com/Dtv48-Olu/Binary_Game",
-      "demo": "#",
-      "docs": "#"
+    {
+        "id": "file-encryption",
+        "title": "File Encryption Tool",
+        "description": "Optimized C++ file encryption utility implementing modern cryptographic algorithms for secure file handling.",
+        "status": "building",
+        "progress": 60,
+        "techStack": ["C++", "Cryptography", "File I/O"],
+        "links": {
+            "github": "https://github.com/Dtv48-Olu/File-Encryption",
+            "demo": "#",
+            "docs": "#"
+        },
+        "repo": "File-Encryption",
+        "manual": true
     },
-    "repo": "Binary_Game",
-    "manual": true
-  },
-  {
-    "id": "next-portfolio-platform",
-    "title": "Next.js Portfolio Platform",
-    "description": "Current site: statically generated portfolio with dynamic project zones, Tailwind theming, and automated GitHub Pages deployment.",
-    "status": "shipped",
-    "progress": 100,
-    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "GitHub Actions"],
-    "links": {
-      "github": "https://github.com/Dtv48-Olu/Portfolio-Website",
-      "demo": "https://dtv48-olu.github.io/Portfolio-Website/",
-      "docs": "#"
+    {
+        "id": "stardust-saga-refactor",
+        "title": "Stardust Saga Refactor",
+        "description": "Re-architecting a 2D action adventure in Godot 4 with a modular ECS, object pooling, and scene streaming for buttery-smooth combat.",
+        "status": "building",
+        "progress": 18,
+        "techStack": ["Godot", "GDScript", "ECS", "Game Design"],
+        "links": {
+            "github": "https://github.com/Dtv48-Olu/stardust-saga-refactor",
+            "demo": "#",
+            "docs": "#"
+        },
+        "repo": "stardust-saga-refactor",
+        "manual": true
     },
-    "repo": "Portfolio-Website",
-    "manual": true
-  }
+    {
+        "id": "dev-productivity-dashboard",
+        "title": "Dev Productivity Dashboard",
+        "description": "Full-stack dashboard for personal KPIs, code snippet search, and automation hooks powered by JWT auth and MongoDB text indexes.",
+        "status": "building",
+        "progress": 28,
+        "techStack": ["Next.js", "Node.js", "MongoDB", "JWT"],
+        "links": {
+            "github": "https://github.com/Dtv48-Olu/dev-productivity-dashboard",
+            "demo": "#",
+            "docs": "#"
+        },
+        "repo": "dev-productivity-dashboard",
+        "manual": true
+    },
+    {
+        "id": "finance-engine",
+        "title": "Personal Finance Engine",
+        "description": "Spring Boot microservice that ingests transactions, enforces budgeting rules, and exposes a typed REST API with PostgreSQL backing.",
+        "status": "planned",
+        "progress": 0,
+        "techStack": ["Java", "Spring Boot", "PostgreSQL", "Flyway"],
+        "links": {
+            "github": "https://github.com/Dtv48-Olu/finance-engine",
+            "demo": "#",
+            "docs": "#"
+        },
+        "repo": "finance-engine",
+        "manual": true
+    },
+    {
+        "_comment": "EXCLUDED REPOS - These IDs will be hidden from the portfolio",
+        "id": "__exclude__",
+        "exclude": [
+            "dtv48-olu",
+            "git-test",
+            "homework-8-new",
+            "project-4-cs1337",
+            "basic-c--file-input",
+            "odin-recipes",
+            "portfolio-website",
+            "binary-game"
+        ]
+    }
 ]
